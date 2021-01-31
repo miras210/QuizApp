@@ -9,6 +9,7 @@ import UIKit
 
 protocol QuizViewControllerDelegate {
     func getScore()->Int
+    func refreshData()
 }
 
 class QuizViewController: UIViewController {
@@ -28,6 +29,7 @@ class QuizViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         questions = (delegate?.getQuiz())!
+        refreshData()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -144,6 +146,14 @@ class QuizViewController: UIViewController {
 }
 
 extension QuizViewController: QuizViewControllerDelegate {
+    func refreshData() {
+        questionId = 0
+        score = 0
+        for i in 0..<questions.count {
+            questions[i].chosen = -1
+        }
+    }
+    
     func getScore() -> Int {
         return score
     }

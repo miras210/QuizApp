@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		732F518225C6A4F60038AB68 /* HistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 732F518025C6A4F50038AB68 /* HistoryTableViewCell.swift */; };
+		732F518325C6A4F60038AB68 /* HistoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 732F518125C6A4F50038AB68 /* HistoryTableViewCell.xib */; };
 		73A5ABD825C5DA41002B65E5 /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A5ABD725C5DA41002B65E5 /* QuizViewController.swift */; };
 		73A5ABDB25C5DA76002B65E5 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A5ABDA25C5DA76002B65E5 /* HistoryViewController.swift */; };
 		73A5ABDE25C5DAB2002B65E5 /* FinishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A5ABDD25C5DAB2002B65E5 /* FinishViewController.swift */; };
@@ -21,6 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		732F518025C6A4F50038AB68 /* HistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewCell.swift; sourceTree = "<group>"; };
+		732F518125C6A4F50038AB68 /* HistoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryTableViewCell.xib; sourceTree = "<group>"; };
 		73A5ABD725C5DA41002B65E5 /* QuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
 		73A5ABDA25C5DA76002B65E5 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		73A5ABDD25C5DAB2002B65E5 /* FinishViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +51,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		732F517F25C6A4CB0038AB68 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				732F518025C6A4F50038AB68 /* HistoryTableViewCell.swift */,
+				732F518125C6A4F50038AB68 /* HistoryTableViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		73BE61D525C1228200954F1F = {
 			isa = PBXGroup;
 			children = (
@@ -66,6 +79,7 @@
 		73BE61E025C1228200954F1F /* QuizApp */ = {
 			isa = PBXGroup;
 			children = (
+				732F517F25C6A4CB0038AB68 /* Cells */,
 				73BE61F725C123FA00954F1F /* Controllers */,
 				73BE61F625C123EE00954F1F /* Models */,
 				73BE61E125C1228200954F1F /* AppDelegate.swift */,
@@ -157,6 +171,7 @@
 			files = (
 				73BE61EE25C1228400954F1F /* LaunchScreen.storyboard in Resources */,
 				73BE61EB25C1228400954F1F /* Assets.xcassets in Resources */,
+				732F518325C6A4F60038AB68 /* HistoryTableViewCell.xib in Resources */,
 				73BE61E925C1228200954F1F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -168,6 +183,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				732F518225C6A4F60038AB68 /* HistoryTableViewCell.swift in Sources */,
 				73BE61E625C1228200954F1F /* ViewController.swift in Sources */,
 				73A5ABD825C5DA41002B65E5 /* QuizViewController.swift in Sources */,
 				73A5ABE125C603E6002B65E5 /* Score.swift in Sources */,

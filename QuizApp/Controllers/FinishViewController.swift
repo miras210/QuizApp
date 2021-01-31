@@ -25,7 +25,8 @@ class FinishViewController: UIViewController {
     }
     
     @IBAction func tryAgainButtonIsPressed(_ sender: Any) {
-        
+        delegate?.refreshData()
+        navigationController?.popViewController(animated: true)
     }
     
     @IBAction func mainPageButtonIsPressed(_ sender: Any) {

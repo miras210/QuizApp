@@ -10,6 +10,7 @@ import UIKit
 protocol ViewControllerDelegate {
     func getQuiz()->([Question])
     func setScore(_ score: Int)
+    func getHistory()->[Score]
 }
 
 class ViewController: UIViewController {
@@ -44,13 +45,18 @@ class ViewController: UIViewController {
     }
     @IBAction func historyIsPressed(_ sender: Any) {
         let vc = storyboard?.instantiateViewController(identifier: "HistoryViewController") as! HistoryViewController
+        vc.delegate = self
         navigationController?.pushViewController(vc, animated: true)
     }
 }
 
 extension ViewController: ViewControllerDelegate {
+    func getHistory() -> [Score] {
+        return history
+    }
+    
     func setScore(_ score: Int) {
-        history.append(Score(title: "Attempt #\(history.count)", points: score))
+        history.append(Score(title: "Attempt #\(history.count)", points: score, numOfQuestions: quiz.count))
     }
     
     func getQuiz() -> ([Question]) {
